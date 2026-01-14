@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Kumkum ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Floating Hearts */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+    color: rgba(255,255,255,0.8);
+}
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    background: rgba(255,255,255,0.18);
+    padding: 40px;
+    border-radius: 22px;
+    width: 90%;
+    max-width: 460px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.3);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <div class="card">
+        <h1>🎉 Welcome Kumkum 💖</h1>
+        <p>
+            🎂 Happy Birthday My Love ❤️<br><br>
+            Kumkum, you are the most beautiful part of my life.
+            Your smile lights up my world and your love gives my life meaning.
+            Every moment with you feels like a blessing.<br><br>
+            May your day be filled with happiness, love, and everything
+            your heart desires. I’m so lucky to have you — today and always 💕
+        </p>
+        <p><strong>👑 Happy Birthday My Queen 👑</strong></p>
+    </div>
+</div>
+
+<script>
+// Floating hearts animation
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}, 300);
+</script>
+
+</body>
+</html>
